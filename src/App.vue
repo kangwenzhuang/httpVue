@@ -26,11 +26,16 @@ export default {
         ])
       });
     },
-    sayHello() {
+    async sayHello() {
       console.log("udfhiefhfedgfie");
-      this.$http.get('http://172.17.173.150:8080/signin/test').then(res=>{
-        console.log(res);
-      })
+      await this.$http
+        .post("http://172.17.173.150:8080/signin/test", {})
+        .then(res => {
+          console.log("我真的很难受");
+        });
+      await this.$http.get("http://172.17.173.150:8080/signin/test").then(res => {
+        console.log(res.bodyText);
+      });
     }
   }
 };
