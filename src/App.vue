@@ -3,6 +3,7 @@
     <el-button :plain="true" @click="open">打开消息提示</el-button>
     <el-button :plain="true" @click="openVn">VNode</el-button>
     <el-button type="primary" icon="el-icon-search" @click="sayHello">搜索</el-button>
+    <el-button>hello</el-button>
   </div>
 </template>
 
