@@ -2,7 +2,7 @@
   <div>
     <el-button :plain="true" @click="open">打开消息提示</el-button>
     <el-button :plain="true" @click="openVn">VNode</el-button>
-    <el-button type="primary" icon="el-icon-search" @click="ui">搜索</el-button>
+    <el-button type="primary" icon="el-icon-search" @click="sayHello">搜索</el-button>
   </div>
 </template>
 
@@ -24,6 +24,12 @@ export default {
           h("i", { style: "color: teal" }, "VNode")
         ])
       });
+    },
+    sayHello() {
+      console.log("udfhiefhfedgfie");
+      this.$http.get('http://172.17.173.150:8080/signin/test').then(res=>{
+        console.log(res);
+      })
     }
   }
 };
