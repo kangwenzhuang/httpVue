@@ -52,8 +52,8 @@ export default {
     async userList() {
       await this.$http
         .post("http://172.17.173.150:8080/signin/userList", {
-          'index':3,
-          'count':3,
+          'index':3,//第几页
+          'count':3,//每页多少数据
           'shenfen':2,
         })
         .then(res => {
